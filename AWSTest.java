@@ -57,7 +57,9 @@ class AWSTest {
 		int[] arr1 = {1, 3, 3};
 		int[] arr2 = {1, 1, 1, 1};
 		
-		AWS aws = new AWS(first);
+		AWS aws = new AWS(arr1);
+		
+		assertEquals("AWS [values={1,2,3}]", aws.toString());
 	}
 
 	@Test
