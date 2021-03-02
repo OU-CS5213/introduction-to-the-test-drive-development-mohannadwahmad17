@@ -16,7 +16,14 @@ class AWSTest {
 
 	@Test
 	void testGetValues() {
-		fail("Not yet implemented");
+		int[] expected = {1, 2, 3};
+		int[] x = {1, 3, 2};
+		
+		AWS aws = new AWS(x);
+		
+		int[] actual = aws.getValues();
+		assertEquals(actual[0], expected[0]);
+		assertEquals(actual[1], expected[1]);
 	}
 
 	@Test
