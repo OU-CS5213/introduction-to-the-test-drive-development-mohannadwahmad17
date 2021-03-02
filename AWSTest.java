@@ -53,7 +53,11 @@ class AWSTest {
 
 	@Test
 	void testToString() {
-		fail("Not yet implemented");
+		int[] first = {1, 2, 3};
+		int[] arr1 = {1, 3, 3};
+		int[] arr2 = {1, 1, 1, 1};
+		
+		AWS aws = new AWS(first);
 	}
 
 	@Test
