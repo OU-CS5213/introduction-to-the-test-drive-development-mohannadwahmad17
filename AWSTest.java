@@ -16,17 +16,50 @@ class AWSTest {
 
 	@Test
 	void testGetValues() {
-		fail("Not yet implemented");
+		int[] expected = {1, 2, 3};
+		int[] x = {1, 2, 3};
+		
+		AWS aws = new AWS(x);
+		
+		int[] actual = aws.getValues();
+		assertEquals(actual[0], expected[0]);
+		assertEquals(actual[1], expected[1]);
+		assertEquals(actual[2], expected[2]);
 	}
 
 	@Test
 	void testSetValues() {
-		fail("Not yet implemented");
+		int[] first = {1, 2, 3};
+		int[] arr1 = {1, 3, 3};
+		int[] arr2 = {1, 1, 1, 1};
+		
+		AWS aws = new AWS(first);
+		
+		aws.setValues(arr1);
+		int[] results = aws.getValues();
+		
+		assertEquals(arr1[0], results[0]);
+		assertEquals(arr1[1], results[1]);
+		assertEquals(arr1[2], results[2]);
+		
+		aws.setValues(arr2);
+		int[] actual = aws.getValues();
+		
+		assertEquals(arr2[0], actual[0]);
+		assertEquals(arr2[1], actual[1]);
+		assertEquals(arr2[2], actual[2]);
+		assertEquals(arr2[3], actual[3]);
 	}
 
 	@Test
 	void testToString() {
-		fail("Not yet implemented");
+		int[] first = {1, 2, 3};
+		int[] arr1 = {1, 3, 3};
+		int[] arr2 = {1, 1, 1, 1};
+		
+		AWS aws = new AWS(arr1);
+		
+		assertEquals("AWS [values={1,2,3}]", aws.toString());
 	}
 
 	@Test
